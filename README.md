@@ -1,2 +1,2 @@
 # StarVote
-this is like stack overflow with star in positive and negative
+This is like stack overflow with star in positive and negative
