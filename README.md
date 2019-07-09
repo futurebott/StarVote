@@ -9,3 +9,5 @@ Here are the stories.
 4. Let user login with OAth
 5. Let user upload a picture
 6. Let user change display name
+
+Adding Edit
