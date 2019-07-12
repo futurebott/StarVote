@@ -19,6 +19,13 @@ steps:
     yarn install
     yarn build
   displayName: 'yarn install and build'
-- task: PublishBuildArtifacts@1
+- task: CopyFiles@2
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)'
+    SourceFolder: '$(Agent.BuildDirectory)'
+    Contents: |
+      **\*.js
+      package.json
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+   
