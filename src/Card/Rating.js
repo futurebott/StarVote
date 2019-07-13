@@ -12,6 +12,7 @@ class  RatingInput extends React.Component {
     }
     HandleChange = (event) => {
         this.setState({rating: event.target.value})
+        this.props.updateRating(event.target.value)
     }
 
     render() { 
