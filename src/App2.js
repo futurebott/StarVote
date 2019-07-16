@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
-
-//import About from "./Comp/";
+import "./bootstrap.min.css";
 import CardList from "./Comp/Card/CardList";
 import getCards from "./Jss/CardRepo"; //(with path)
 
