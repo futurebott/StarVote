@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import * as showActions from "./../../redux/actions/showActions";
 
 class ShowForm extends React.Component {
   constructor(props) {
@@ -11,7 +13,9 @@ class ShowForm extends React.Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    alert(this.state.show.title);
+    debugger;
+    this.props.dispatch(showActions.CreateShow(this.state.show));
+    this.setState({ show: { title: "" } });
   };
   render() {
     return (
@@ -23,8 +27,17 @@ class ShowForm extends React.Component {
           value={this.state.show.title}
         />
         <button> Save</button>
+        {this.props.show.map(show => (
+          <div key={show.title}>{show.title}</div>
+        ))}
       </form>
     );
   }
 }
-export default ShowForm;
+function mapStateToProps(state, OwnProps) {
+  return {
+    show: state.show
+  };
+}
+
+export default connect(mapStateToProps)(ShowForm);

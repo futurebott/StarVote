@@ -3,12 +3,15 @@
   "version": "1.0",
   "private": false,
   "dependencies": {
+    "jshint": "^2.10.2",
+    "jslint": "^0.12.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router-dom": "^4.4.0-beta.8",
     "react-scripts": "3.0.1",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "redux-immutable-state-invariant": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
